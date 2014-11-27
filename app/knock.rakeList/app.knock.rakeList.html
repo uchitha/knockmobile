@@ -1,0 +1,32 @@
+<div ng-controller="RakeList as vm">
+	<div class="container-fluid" style="padding-top: 60px">
+		<div class="row">
+			<div class="col-xs-4 col-md-2 col-md-offset-2 text-left">
+				<span style="font-size:16px">{{ vm.currentTime | date:'MMM dd H:mm' }}</span>
+			</div>
+			<div class="col-md-6 text-right">
+				<input id="showAllRakesToggle" type="checkbox" 
+						data-toggle="toggle" 
+						data-on="All Rakes"
+						data-off="Rakes @ Yard"
+						data-size="large"
+						data-onstyle="danger" 
+						data-offstyle="warning">
+				</input> 
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row" ng-repeat="rake in vm.rakeList" style="padding-top: 20px;">
+			<div class="col-md-8 col-md-offset-2 text-center">
+				<button ng-if="rake.knocked == 'false'" 
+						type="button" 
+						ng-click="vm.goToSaveKnock(rake.rakeNumber)"
+						class="btn btn-lg btn-block btn-primary">{{ rake.rakeNumber }}</button>
+				<button ng-if="rake.knocked == 'true'" 
+						type="button" 
+						class="btn btn-lg btn-block btn-primary" disabled="disabled">{{ rake.rakeNumber }} - Knocked</button>
+			</div>
+		</div>
+	</div>
+</div>

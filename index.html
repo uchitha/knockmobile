@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knock</title>
+ 
+    <link href="content/bootstrap.css" rel="stylesheet" />
+    <link href="content/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="content/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/kendo.silver.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/kendo.dataviz.silver.min.css" rel="stylesheet" type="text/css" />
+    <link href="content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="content/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+   <div id="wrap">    
+        <div ng-include="'app/layout/topnav.html'"></div>
+        <div>
+            <div ng-view></div>
+        </div>
+         </div>
+        <div ng-include="'app/layout/footer.html'"></div>
+   
+    
+    <!--vendor files-->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap-toggle.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/kendo.all.min.js"></script>
+     
+        
+    <!-- my scripts -->
+    <!-- Modules -->
+    <script src="app/app.js"></script>
+    <script src="app/knock/app.knock.js"></script>
+    <script src="app/knock.rakeList/app.knock.rakeList.js"></script>
+    <script src="app/knock.save/app.knock.save.js"></script>
+
+    <!--Services-->
+    <script src="app/service/knock.service.js"></script>
+
+</body>
+</html>

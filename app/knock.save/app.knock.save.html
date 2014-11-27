@@ -1,0 +1,33 @@
+<div ng-controller="SaveKnock as vm">
+	<div class="container-fluid" style="padding-top: 60px">
+		<div class="row med-row">
+			<div class="col-md-4 col-md-offset-4">
+				<button type="button" class="btn btn-lg btn-success btn-block med-button">Save Knock</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-4">
+					<span class="text-left">Touch a car to deselect</span>
+				</div>
+				<div class="col-md-2 text-right">
+						<input id="selectCarToggle" type="checkbox" 
+							data-toggle="toggle" 
+							data-on="Unselect All"
+							data-off="Selecte All"
+							data-onstyle="danger" 
+							data-offstyle="info">
+						</input> 
+				</div>
+			</div>
+			<div class="row" ng-repeat="car in vm.carList" style="padding-top: 5px">
+					<div class="btn-group" data-toggle="button" style="width:100%">
+						<div class="col-md-4 col-md-offset-4">
+								<button type="button" class="btn btn-primary btn-block" ng-model="car.id" ng-click="vm.selectCar()">{{car.id}} @ position #{{car.position}}</button>
+						</div>
+					</div>
+				</div>
+	</div>
+</div>

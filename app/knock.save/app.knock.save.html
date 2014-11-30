@@ -2,7 +2,7 @@
 	<div class="container-fluid" style="padding-top: 60px">
 		<div class="row med-row">
 			<div class="col-md-4 col-md-offset-4">
-				<button type="button" class="btn btn-lg btn-success btn-block med-button" ng-text=""> {{ vm.rakeNumber }} <br/> Save Knock </button>
+				<button type="button" class="btn btn-lg btn-success btn-block med-button" ng-click="vm.saveKnock()"> {{ vm.rakeNumber }} <br/> Save Knock </button>
 			</div>
 		</div>
 	</div>
@@ -33,4 +33,16 @@
 				</div>
 			</div>
 	</div>
+
+	<script type="text/ng-template" id="knockSaveMessage.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{vm.knockResult.title}}</h3>
+        </div>
+        <div class="modal-body">
+           {{ vm.knockResult.message }}
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="vm.goToMainPage()">OK</button>
+        </div>
+    </script>
 </div>

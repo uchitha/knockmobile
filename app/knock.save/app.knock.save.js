@@ -4,11 +4,11 @@
 			.controller('SaveKnock', SaveKnock);
 
 
-	SaveKnock.$inject = ['$scope', '$location','knockservice'];
+	SaveKnock.$inject = ['$location','knockservice'];
 
-	function SaveKnock($scope, $location, knockservice) {
+	function SaveKnock($location, knockservice) {
 		var vm = this;
-		vm.rakeNumber = 'M0324A';
+		vm.rakeNumber = knockservice.getRake();
 		vm.carList = [];
 		vm.selectAllToggle = false; //UnSelect All to b checked
 
@@ -27,13 +27,8 @@
 				vm.carList.forEach(function (c) {
 						c.selected = true;
 				});
-				//console.log(vm.carCheckModel[i]);
-				//i++;
-				console.log(vm.carList);	
 			});
-			
 		}
-
 
 		function selectAll() {
 			vm.selectAllToggle = $("#selectCarToggle").prop('checked');

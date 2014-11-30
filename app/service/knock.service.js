@@ -7,10 +7,22 @@
 
 	function knockservice($http) {
 		return {
+			setRake : setRake,
+			getRake : getRake,
 			getAllRakes : getAllRakes,
 			getRakesAtYard: getRakesAtYard,
 			getCarsForRake: getCarsForRake,
 		};
+
+		var _rakeNumber = '';
+
+		function setRake(rakeNumber) {
+			_rakeNumber = rakeNumber;
+		}
+
+		function getRake() {
+			return _rakeNumber;
+		}
 
 		function getAllRakes() {
 			return {
@@ -34,6 +46,7 @@
 			function getAllCarsForRake(response) {
 				return response.data;
 			}
+
 		}
 
 	}

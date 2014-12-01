@@ -26,7 +26,7 @@
 		}
 
 		function selectCar(car) {
-			console.log(this);
+			//console.log(this);
 		}
 	}
 

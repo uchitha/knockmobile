@@ -23,7 +23,7 @@
 		}
 
 		function goToVehicleSearch() {
-			console.log('TO DO - Vehicle Search');
+            $location.path('/carSearch');
 		}
 
 	}

@@ -34,7 +34,7 @@
 		}
 
 		function goToSaveKnock (rakeNumber) {
-			console.log(rakeNumber);
+			//console.log(rakeNumber);
 			$location.path('/knockSave');
 		}
 	}

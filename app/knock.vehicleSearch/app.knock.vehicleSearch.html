@@ -1,0 +1,21 @@
+<div ng-controller="VehicleSearch as vm">
+	<div class="container-fluid" style="padding-top: 60px">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4 text-center">
+				<input ng-model="vm.searchText" />
+			</div>
+		</div>
+		<div class="row med-row">
+			<div class="col-md-offset-4 col-md-4">
+				<button class="btn btn-primary btn-block btn-success" ng-click="vm.searchCar()">Find Car</button>
+			</div>
+		</div>
+        <div class="row" ng-repeat="car in vm.searchResults">
+            <div class="col-md-offset-4 col-md-4">
+                <button class="btn btn-primary btn-block">{{ car.id }} @ Rake M2334</button>
+            </div>
+        </div>
+
+	</div>
+
+</div>

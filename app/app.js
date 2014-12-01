@@ -13,7 +13,9 @@
 			})
 			.when('/knockSave', {
 				templateUrl: 'app/knock.save/app.knock.save.html'
-			})
+			}).when('/carSearch', {
+                templateUrl: 'app/knock.vehicleSearch/app.knock.vehicleSearch.html'
+            })
 			.otherwise({redirectTo: '/'})
 	}
 

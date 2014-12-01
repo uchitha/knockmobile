@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('app',['ngRoute','kendo.directives'])
+	angular.module('app',['ngRoute','ui.bootstrap'])
 			.config(config);
 
 	function config($routeProvider) {

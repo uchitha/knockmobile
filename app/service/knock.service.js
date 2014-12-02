@@ -26,17 +26,23 @@
 		}
 
 		function getAllRakes() {
-			return {
-				error : "Not Implemented"
-			}
-		}
-
-		function getRakesAtYard() {
 			return $http.get('/app/data/rakeList.json')
 						.then(getAllRakesComplete);
 
 			function getAllRakesComplete(response) {
 				return response.data;
+			}
+		}
+
+		function getRakesAtYard() {
+			return $http.get('/app/data/rakeList.json')
+						.then(getYardRakesComplete);
+
+			function getYardRakesComplete(response) {
+				var data = response.data.filter(function (e) {
+					return (e.location === "yard");
+				});
+				return data;
 			}
 		}
 

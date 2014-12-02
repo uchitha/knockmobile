@@ -30,7 +30,15 @@
 		}
 
 		function showRakeList () {
-			// body...
+			if ($(this).prop('checked')) { //true
+				knockservice.getAllRakes().then(function (data) {
+					vm.rakeList = data;
+				})
+			}else {
+				knockservice.getRakesAtYard().then(function (data) {
+					vm.rakeList = data;
+				})
+			}
 		}
 
 		function goToSaveKnock (rakeNumber) {

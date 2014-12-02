@@ -65,8 +65,8 @@
 		function saveKnock() {
 			//knockService.saveKnock(vm.rakeNumber, vm.carList.filter(function (car) { return car.selected;}));
 
-			//knockSucces();
-			knockFailed();
+			knockSucces();
+			//knockFailed();
 
 			function knockSucces() {
 				vm.knockResult = {

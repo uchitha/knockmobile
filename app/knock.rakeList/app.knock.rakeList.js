@@ -34,7 +34,6 @@
 		}
 
 		function goToSaveKnock (rakeNumber) {
-			console.log(rakeNumber);
 			knockservice.setRake(rakeNumber);
 			$location.path('/knockSave');
 		}

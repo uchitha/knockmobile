@@ -1,21 +1,70 @@
 <div ng-controller="VehicleSearch as vm">
 	<div class="container-fluid" style="padding-top: 60px">
+
 		<div class="row">
+			<div class="col-md-offset-4 col-md-2 text-left">
+				<h4>Enter Car Number: </h4>
+			</div>
+			<div class="col-md-2 text-right">
+				<h4><input ng-model="vm.searchText" /></h4>
+			</div>
+		</div>
+		
+		<!-- <div class="row">
 			<div class="col-md-offset-4 col-md-4 text-center">
 				<input ng-model="vm.searchText" />
 			</div>
-		</div>
-		<div class="row med-row">
+		</div> -->
+		<div class="row" style="margin-bottom: 10px;margin-top: 10px">
 			<div class="col-md-offset-4 col-md-4">
 				<button class="btn btn-primary btn-block btn-success" ng-click="vm.searchCar()">Find Car</button>
 			</div>
 		</div>
-        <div class="row" ng-repeat="car in vm.searchResults">
-            <div class="col-md-offset-4 col-md-4">
-                <button class="btn btn-primary btn-block">{{ car.id }} @ Rake M2334</button>
+        <div class="row" ng-repeat="car in vm.searchResults" style="margin-bottom: 5px;">
+            <div class="col-md-offset-4 col-md-4" ng-if="vm.isNotAdded(car.id)">
+                <button class="btn btn-primary btn-block" ng-click="vm.selectCar(car.id)">{{ car.id }} - Touch to Add</button>
             </div>
         </div>
+
+        <div class="row" ng-if="vm.noCars">
+			<div class="col-md-offset-4 col-md-4 text-left">
+				<h4>No cars found</h4>
+			</div>
+		</div>
+
+        </span>
+        <hr/>
+        
+        <div class="row" ng-if="vm.carsToKnock.length > 0">
+			<div class="col-md-offset-4 col-md-4 text-left">
+				<h4>Knock</h4>
+			</div>
+		</div>
+        <div class="row" ng-repeat="carId in vm.carsToKnock" style="margin-bottom: 5px">
+        	<div class="col-md-offset-4 col-md-4 text-center">
+        		<button class="btn btn-info btn-block" ng-click="vm.unSelectCar(carId)">{{carId}} - Touch to remove</button>
+        	</div>
+        </div>
+
+        <div class="row med-row" ng-if="vm.carsToKnock.length > 0">
+			<div class="col-md-offset-4 col-md-4 text-center">
+				<button class="btn btn-primary btn-success med-button btn-block" ng-click="vm.saveCarKnock()" >Knock Car(s)</button>
+			</div>
+		
+		</div>
 
 	</div>
 
 </div>
+
+<script type="text/ng-template" id="carKnockSaveMessage.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{vm.knockResult.title}}</h3>
+        </div>
+        <div class="modal-body">
+           {{ vm.knockResult.message }}
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="vm.goToMainPage()">OK</button>
+        </div>
+</script>

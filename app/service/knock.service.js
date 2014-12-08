@@ -57,15 +57,15 @@
 		}
 
         function searchCar(searchText) {
-            return $http.get('/app/data/carList.json')
-                .then(function(response) { filterCar (response, searchText) });
-
-            function filterCar(response,searchText) {
-                var data = response.data.filter(function (element) {
-                    return element.id === searchText;
+            var searchCarPromise = $http.get('/app/data/carList.json')
+                .then(function(response) {
+                	var results = response.data.filter(function (element) {
+                    	return element.id === searchText;
+                	});
+                	return results;
                 });
-                return response.data;
-            }
+
+            return searchCarPromise;
         }
 
 	}

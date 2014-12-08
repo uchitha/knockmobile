@@ -3,76 +3,91 @@
 	{
 		"id": "2035",
 		"number": "4O2034",
-		"rakePosition": "01"
+		"rakePosition": "01",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "2036",
 		"number": "4O2034",
-		"rakePosition": "02"
+		"rakePosition": "02",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "2037",
 		"number": "4O2034",
-		"rakePosition": "03"
+		"rakePosition": "03",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "2040",
 		"number": "4O2034",
-		"rakePosition": "04"
+		"rakePosition": "04",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "2038",
 		"number": "4O2034",
-		"rakePosition": "05"
+		"rakePosition": "05",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "2041",
 		"number": "4O2034",
-		"rakePosition": "06"
+		"rakePosition": "06",
+		"currentRake": "M0343A"
 	},
 	{
 		"id": "4034",
 		"number": "4O2034",
-		"rakePosition": "100"
+		"rakePosition": "100",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "5034",
 		"number": "4O2034",
-		"rakePosition": "101"
+		"rakePosition": "101",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "2534",
 		"number": "4O2034",
-		"rakePosition": "102"
+		"rakePosition": "102",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "2234",
 		"number": "4O2034",
-		"rakePosition": "103"
+		"rakePosition": "103",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "2134",
 		"number": "4O2034",
-		"rakePosition": "104"
+		"rakePosition": "104",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "6034",
 		"number": "4O2034",
-		"rakePosition": "105"
+		"rakePosition": "105",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "6234",
 		"number": "4O2034",
-		"rakePosition": "106"
+		"rakePosition": "106",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "3334",
 		"number": "4O2034",
-		"rakePosition": "107"
+		"rakePosition": "107",
+		"currentRake": "M0324B"
 	},
 	{
 		"id": "9900",
 		"number": "4O2034",
-		"rakePosition": "108"
+		"rakePosition": "108",
+		"currentRake": "M0324B"
 	}
 ]

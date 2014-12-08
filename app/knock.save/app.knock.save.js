@@ -72,7 +72,7 @@
 				vm.knockResult = {
 					success : true,
 					title: "Success",
-					message : "Knock successfully saved"
+					message : "Knock successfully saved for rake " + vm.rakeNumber
 				}
 				showWindow();
 			}

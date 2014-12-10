@@ -17,15 +17,15 @@
 			<div class="col-md-2"></div>
 		</div>
 
-		<div class="row" ng-repeat="rake in vm.rakeList" style="padding-top: 20px;">
+		<div class="row med-small-row" ng-repeat="rake in vm.rakeList" style="padding-top: 20px;">
 			<div class="col-md-8 col-md-offset-2 text-center">
 				<button ng-if="rake.knocked == 'false'" 
 						type="button" 
 						ng-click="vm.goToSaveKnock(rake.rakeNumber)"
-						class="btn btn-lg btn-block btn-primary">{{ rake.rakeNumber }}</button>
+						class="btn btn-lg btn-block btn-primary med-small-button">{{ rake.rakeNumber }}</button>
 				<button ng-if="rake.knocked == 'true'" 
 						type="button" 
-						class="btn btn-lg btn-block btn-primary" disabled="disabled">{{ rake.rakeNumber }} - Knocked</button>
+						class="btn btn-lg btn-block btn-primary med-small-button" disabled="disabled">{{ rake.rakeNumber }} - Knocked</button>
 			</div>
 		</div>
 	</div>

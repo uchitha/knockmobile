@@ -39,6 +39,19 @@ html, body {
 	height: 100%;
 }
 
+.med-small-row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 70px;
+}
+
+.med-small-row div {
+	height: 100%;
+}
+.med-small-button {
+	height: 100%;
+}
+
 #footer {
 	height: 60px;
 	padding-top: 10px;

@@ -26,7 +26,7 @@
 		}
 
 		function getAllRakes() {
-			return $http.get('/app/data/rakeList.json')
+			return $http.get('/app/data/rakeList.json',{cache: true})
 						.then(getAllRakesComplete);
 
 			function getAllRakesComplete(response) {
@@ -35,7 +35,7 @@
 		}
 
 		function getRakesAtYard() {
-			return $http.get('/app/data/rakeList.json')
+			return $http.get('/app/data/rakeList.json', {cache: true})
 						.then(getYardRakesComplete);
 
 			function getYardRakesComplete(response) {
@@ -47,7 +47,7 @@
 		}
 
 		function getCarsForRake(rakeNumber) {
-			return $http.get('/app/data/carList.json')
+			return $http.get('/app/data/carList.json',{cache: true})
 						.then(getAllCarsForRake);
 
 			function getAllCarsForRake(response) {
@@ -57,7 +57,7 @@
 		}
 
         function searchCar(searchText) {
-            var searchCarPromise = $http.get('/app/data/carList.json')
+            var searchCarPromise = $http.get('/app/data/carList.json',{cache: true})
                 .then(function(response) {
                 	// var results = response.data.filter(function (element) {
                  //        	return element.id === searchText;

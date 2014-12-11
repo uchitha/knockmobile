@@ -59,9 +59,9 @@
         function searchCar(searchText) {
             var searchCarPromise = $http.get('/app/data/carList.json')
                 .then(function(response) {
-                	var results = response.data.filter(function (element) {
-                        	return element.id === searchText;
-                	});
+                	// var results = response.data.filter(function (element) {
+                 //        	return element.id === searchText;
+                	// });
                 	var anyCar = response.data[getRandomInt(0,10)];
                 	anyCar.id = searchText;
                 	var results = [];

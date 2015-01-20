@@ -1,6 +1,6 @@
 (function () {
 
-	angular.module('app',['ngRoute','ui.bootstrap'])
+	angular.module('app',['ngRoute', 'ngAnimate','ui.bootstrap'])
 			.config(config);
 
 	function config($routeProvider) {

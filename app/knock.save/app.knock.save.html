@@ -25,11 +25,8 @@
 
 			<div class="row med-small-row" ng-repeat="car in vm.carList" style="padding-top: 8px">
 				<div class="col-md-4 col-md-offset-4">
-					<div class="btn-group" style="width:100%;">
-						<label class="btn btn-primary btn-block active med-small-button" ng-class="{'btn-primary-border': !car.selected}" ng-model="car.selected" btn-checkbox>
-							{{car.id}} <br/>
-							position #{{car.rakePosition}}
-						</label>
+					<div class="btn-group" style="width: 100%">
+						<button type="button" class="btn btn-block med-small-button" ng-class="{'btn-primary btn-unselected': !car.selected, 'btn-primary': car.selected}" ng-click="car.selected = !car.selected">{{car.id}} <br/> position #{{car.rakePosition}}</button>
 					</div>
 				</div>
 			</div>
